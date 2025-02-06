@@ -81,7 +81,7 @@
             const width = img.naturalWidth;
             const height = img.naturalHeight;
 
-            if (width > height) {
+            if (width >= height) {
                 // Landscape mode
                 parentDiv.classList.add("landscape");
                 parentDiv.classList.remove("portrait");

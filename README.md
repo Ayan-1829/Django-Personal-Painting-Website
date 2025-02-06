@@ -62,7 +62,6 @@ Now, open **http://127.0.0.1:8000/** in your browser.
  ├── urls.py            # URL routing
  └── forms.py           # Django forms
 📁 media/               # Uploaded paintings
-📁 templates/           # Global templates
 manage.py               # Django management file
 requirements.txt        # Dependencies
 
