@@ -93,7 +93,7 @@ Want to contribute? Fork the repo, make changes, and submit a pull request!
 
 ## 📧 Contact
 For any inquiries, reach out to **Ayan** at:
-📩 Email: [your-ayansarkar1829@gmail.com](mailto:ayansarkar1829@gmail.com)
+📩 Email: [ayansarkar1829@gmail.com](mailto:ayansarkar1829@gmail.com)
 
 ---
 
