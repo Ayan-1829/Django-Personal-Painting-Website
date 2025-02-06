@@ -1,0 +1,29 @@
+<!-- gallery/templates/gallery/upload.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload a New Painting</title>
+    <link rel="stylesheet" href="{% static 'gallery/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Upload a New Painting</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <hr>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

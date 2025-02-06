@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencil Play</title>
+    <link rel="stylesheet" href="{% static 'gallery/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Pencil Play</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+
+            {% if user.is_authenticated %}
+            
+            <a href="{% url 'upload_painting' %}">Upload a Painting</a>
+
+            <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+            {% else %}
+            <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </nav>
+    </header>
+    <div class="container">
+        <section class="gallery-container">
+            {% for painting in paintings %}
+            <div class="painting-item">
+                <h2 class="title">{{ painting.title }}</h2>
+                {% if painting.image %}
+                <img src="{{ painting.image.url }}" alt="{{ painting.title }}" onload="adjustImageSize(this)"
+                    onclick="openModal('{{ painting.image.url }}', '{{ painting.title }}')">
+                {% endif %}
+                <p>{{ painting.description }}</p>
+                <p><strong>Medium:</strong> {{ painting.medium }}</p>
+
+                <!-- Edit Delete option -->
+                {% if user.is_authenticated %}
+                <div class="admin-actions">
+                    <a href="{% url 'edit_painting' painting.pk %}">Edit</a> |
+                    <a href="{% url 'delete_painting' painting.pk %}">Delete</a>
+                </div>
+                {% endif %}
+            </div>
+            {% empty %}
+            <p>No paintings available yet.</p>
+            {% endfor %}
+        </section>
+    </div>
+
+    <!-- Modal for enlarged image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img id="modalImage" src="" alt="">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function openModal(src, alt) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modalImage.src = src;
+            modalImage.alt = alt;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+
+        function adjustImageSize(img) {
+            const parentDiv = img.parentElement;
+            const width = img.naturalWidth;
+            const height = img.naturalHeight;
+
+            if (width > height) {
+                // Landscape mode
+                parentDiv.classList.add("landscape");
+                parentDiv.classList.remove("portrait");
+            } else {
+                // Portrait mode
+                parentDiv.classList.add("portrait");
+                parentDiv.classList.remove("landscape");
+            }
+        }
+    </script>
+</body>
+
+</html>

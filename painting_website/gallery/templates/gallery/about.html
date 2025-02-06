@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ayan</title>
+    <link rel="stylesheet" href="{% static 'gallery/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about-container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Welcome to My World of Art</h2>
+                <p>Hi, I'm <strong>Ayan</strong>, an artist passionate about bringing creativity to life.  
+                My journey in the world of art started from a young age, and over the years, I have honed my skills in various art forms.  
+                I specialize in <strong>portrait painting</strong>, capturing emotions with depth and realism.  
+                My favorite medium is <strong>acrylic painting on canvas</strong>, where I explore vibrant colors and bold strokes.  
+                I also enjoy the simplicity and elegance of <strong>pencil sketching</strong>, which allows me to express intricate details with precision.</p>
+                
+                <p>Beyond painting, I have a deep love for arts and crafts, where I experiment with different materials and textures.  
+                My goal is to create art that inspires and connects with people on an emotional level.  
+                Thank you for visiting my page, and I hope my artwork brings you joy and inspiration!</p>
+            </div>
+
+            <div class="about-image">
+                <img src="{% static 'gallery/ayan.jpg' %}" alt="Ayan - Portrait">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

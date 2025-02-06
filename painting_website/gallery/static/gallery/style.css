@@ -1,0 +1,226 @@
+/* gallery/static/gallery/style.css */
+
+/* Apply a background color or gradient to the entire page */
+body {
+    margin: 5;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #c8dcff, #c8dcff);
+    color: #333;
+}
+
+/* Container for the header */
+header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 25px;
+    position: relative;
+}
+
+header h1 {
+    color: #004b92;
+    text-shadow: #000;
+}
+
+/* Navigation styling */
+nav {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+nav a {
+    text-decoration: none;
+    color: #004b92;
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 5px 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #004b92;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.container a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container a:hover {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Modal overlay for enlarged images */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the enlarged image */
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid #fff;
+    border-radius: 4px;
+}
+
+/* Optional: Change cursor on modal (for closing) */
+.modal {
+    cursor: pointer;
+}
+
+/* Container for the gallery of paintings */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centers the items horizontally */
+    gap: 20px; /* space between items */
+    padding: 20px;
+}
+
+
+/* Responsive container for content */
+.container {
+    width: 98%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Default styles for painting items */
+.painting-item {
+    flex: 1 1 300px; /* grow, shrink, and base width */
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    /* border: 2px solid #ddd; */
+    border-radius: 5px;
+    /* color: #004b92; */
+    background-color: rgba(255, 255, 255, 0.0);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.title {
+    color: #004b92;
+}
+
+.gallery-container :hover{
+    scale: 1.02;
+    transition: all .3s ease;
+}
+
+/* Default image styling */
+.painting-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+ 
+.painting-item :hover{
+    cursor: pointer;
+}
+
+/* Styles for landscape images */
+.landscape {
+    width: 60%; /* Make it wider */
+    max-width: 500px;
+}
+
+/* Styles for portrait images */
+.portrait {
+    width: 40%; /* Make it narrower */
+    max-width: 300px;
+}
+
+/* Additional styling for forms */
+form {
+    margin-top: 20px;
+}
+
+input[type="text"], textarea, input[type="file"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #004b92;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-image img {
+    width: 300px;
+    height: 400%;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    nav {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
