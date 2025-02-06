@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Painting(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, blank=True)
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='paintings/')
     MEDIUM_CHOICES = [

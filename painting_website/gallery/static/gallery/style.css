@@ -4,13 +4,14 @@
 body {
     margin: 5;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #c8dcff, #c8dcff);
+    background: linear-gradient(to left, #c8dcff, #9dbdf5);
     color: #333;
 }
 
 /* Container for the header */
 header {
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background: linear-gradient(to right, rgba(248, 251, 255, 0.5),rgba(0, 22, 45, 0.05));
     padding: 10px 25px;
     position: relative;
 }
@@ -77,8 +78,8 @@ img {
 
 /* Style the enlarged image */
 .modal img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
     border: 5px solid #fff;
     border-radius: 4px;
 }
@@ -100,7 +101,7 @@ img {
 
 /* Responsive container for content */
 .container {
-    width: 98%;
+    width: 95%;
     max-width: 1200px;
     margin: 20px auto;
 }
