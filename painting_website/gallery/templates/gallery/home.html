@@ -13,7 +13,7 @@
     <header>
         <h1>Pencil Play</h1>
         <nav>
-            <a href="{% url 'home' %}">Home</a>
+            <!-- <a href="{% url 'home' %}">Home</a> -->
             <a href="{% url 'about' %}">About</a>
             <a href="{% url 'contact' %}">Contact</a>
 
@@ -36,7 +36,7 @@
             <div class="painting-item">
                 <h2 class="title">{{ painting.title }}</h2>
                 {% if painting.image %}
-                <img src="{{ painting.image.url }}" alt="{{ painting.title }}" onload="adjustImageSize(this)"
+                <img class="each_image" src="{{ painting.image.url }}" alt="{{ painting.title }}" onload="adjustImageSize(this)"
                     onclick="openModal('{{ painting.image.url }}', '{{ painting.title }}')">
                 {% endif %}
                 <p>{{ painting.description }}</p>

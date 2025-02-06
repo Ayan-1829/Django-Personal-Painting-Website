@@ -2,18 +2,19 @@
 
 /* Apply a background color or gradient to the entire page */
 body {
-    margin: 5;
+    margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to left, #c8dcff, #9dbdf5);
+    background: linear-gradient(to left, #c8dcff, #b6d1ff);
     color: #333;
 }
 
 /* Container for the header */
 header {
     /* background-color: rgba(255, 255, 255, 0.1); */
-    background: linear-gradient(to right, rgba(248, 251, 255, 0.5),rgba(0, 22, 45, 0.05));
+    background: linear-gradient(to right, rgba(248, 251, 255, 0.3),rgba(243, 249, 255, 0.1));
     padding: 10px 25px;
     position: relative;
+    
 }
 
 header h1 {
@@ -112,19 +113,24 @@ img {
     box-sizing: border-box;
     display: inline-block;
     text-align: left;
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
     /* border: 2px solid #ddd; */
     border-radius: 5px;
     /* color: #004b92; */
     background-color: rgba(255, 255, 255, 0.0);
     transition: all 0.3s ease-in-out;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
     
 }
 
 .title {
     color: #004b92;
+}
+
+.each_image{
+    border: 2px solid rgba(255, 255, 255, .5);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .gallery-container :hover{
@@ -180,7 +186,7 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #004b92;
 }
 
 .about-container {
@@ -188,7 +194,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 30px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
 
