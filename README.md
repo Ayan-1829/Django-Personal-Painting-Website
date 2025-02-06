@@ -16,8 +16,8 @@ A web application built with **Django** to showcase artwork, including **portrai
 ## 🛠️ Installation
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/your-username/django-painting-website.git
-cd django-painting-website
+git clone https://github.com/Ayan-1829/Django-Personal-Painting-Website.git
+cd painting_website
 ```
 
 ### **2. Create & Activate Virtual Environment**
@@ -54,21 +54,19 @@ Now, open **http://127.0.0.1:8000/** in your browser.
 
 ## 📂 Project Structure
 ```
-📁 django-painting-website/
-├── 📁 gallery/            # Main app for paintings
-│   ├── 📂 static/         # CSS & images
-│   ├── 📂 templates/      # HTML files
-│   ├── models.py         # Database models
-│   ├── views.py          # Backend logic
-│   ├── urls.py           # URL routing
-│   └── forms.py          # Django forms
-├── 📁 media/              # Uploaded paintings
-├── 📁 templates/           # Global templates
-├── manage.py              # Django management file
-└── requirements.txt       # Dependencies
-```
+📁 gallery/             # Main app for paintings
+ ├── 📂 static/         # CSS & images
+ ├── 📂 templates/      # HTML files
+ ├── models.py          # Database models
+ ├── views.py           # Backend logic
+ ├── urls.py            # URL routing
+ └── forms.py           # Django forms
+📁 media/               # Uploaded paintings
+📁 templates/           # Global templates
+manage.py               # Django management file
+requirements.txt        # Dependencies
 
----
+```
 
 ## 🎨 How to Use
 1. **Visit the Home Page** to see all paintings.
