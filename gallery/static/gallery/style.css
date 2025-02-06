@@ -87,7 +87,7 @@ img {
 
 /* Optional: Change cursor on modal (for closing) */
 .modal {
-    cursor: pointer;
+    cursor: finger;
 }
 
 /* Container for the gallery of paintings */
@@ -103,7 +103,7 @@ img {
 /* Responsive container for content */
 .container {
     width: 95%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 20px auto;
 }
 
@@ -118,7 +118,7 @@ img {
     /* border: 2px solid #ddd; */
     border-radius: 5px;
     /* color: #004b92; */
-    background-color: rgba(255, 255, 255, 0.0);
+    background-color: rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease-in-out;
     /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
     
@@ -131,6 +131,7 @@ img {
 .each_image{
     border: 2px solid rgba(255, 255, 255, .5);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .gallery-container :hover{
@@ -144,10 +145,6 @@ img {
     height: auto;
     display: block;
     margin: auto;
-}
- 
-.painting-item :hover{
-    cursor: pointer;
 }
 
 /* Styles for landscape images */
@@ -194,7 +191,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 30px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
